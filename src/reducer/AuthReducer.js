@@ -15,7 +15,7 @@ export default (state = INTIAL_STATE, action) => {
       // redux automatic overwrite same key
       return { ...state, password: action.payload };
     case LOGIN_USER_SUCCESS:
-      return { ...state, user: action.payload };
+      return { ...state, user: action.payload, error: '' };
     case LOGIN_USER_FAIL:
       return { ...state, error: 'Authentication failed.', password: '' };
     default:
