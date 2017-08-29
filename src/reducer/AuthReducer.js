@@ -6,7 +6,13 @@ import {
   LOGIN_USER,
 } from '../actions/type';
 
-const INTIAL_STATE = { email: '', password: '', user: null, error: '' };
+const INTIAL_STATE = {
+  email: '',
+  password: '',
+  user: null,
+  error: '',
+  loading: false,
+};
 
 export default (state = INTIAL_STATE, action) => {
   switch (action.type) {
@@ -20,11 +26,8 @@ export default (state = INTIAL_STATE, action) => {
     case LOGIN_USER_SUCCESS:
       return {
         ...state,
+        ...INTIAL_STATE,
         user: action.payload,
-        error: '',
-        loading: false,
-        email: '',
-        password: '',
       };
     case LOGIN_USER_FAIL:
       return {
