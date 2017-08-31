@@ -4,12 +4,23 @@ import LoginForm from './component/LoginForm';
 
 const RouterComponent = () => {
   return (
-    <Router >
+    <Router>
       <Stack>
-        <Scene key="login" component={LoginForm} title="Please Login" />
+        <Scene
+          key="login"
+          component={LoginForm}
+          title="Please Login"
+          titleStyle={style.titleStyle}
+        />
       </Stack>
     </Router>
   );
+};
+
+const style = {
+  titleStyle: {
+    alignSelf: 'center',
+  },
 };
 
 export default RouterComponent;
