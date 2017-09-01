@@ -1,26 +1,18 @@
 import React from 'react';
-import { Stack, Scene, Router } from 'react-native-router-flux';
+import { Scene, Router } from 'react-native-router-flux';
 import LoginForm from './component/LoginForm';
 
 const RouterComponent = () => {
   return (
     <Router>
-      <Stack>
-        <Scene
-          key="login"
-          component={LoginForm}
-          title="Please Login"
-          titleStyle={style.titleStyle}
-        />
-      </Stack>
+      <Scene
+        style={{ paddingTop: 50 }}
+        key="login"
+        component={LoginForm}
+        title="Please Login"
+      />
     </Router>
   );
-};
-
-const style = {
-  titleStyle: {
-    alignSelf: 'center',
-  },
 };
 
 export default RouterComponent;
