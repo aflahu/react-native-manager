@@ -5,9 +5,13 @@ import EmployeeList from './component/EmployeeList';
 
 const RouterComponent = () => {
   return (
-    <Router style={{ paddingTop: 55 }}>
-      <Scene key="login" component={LoginForm} title="Please Login" />
-      <Scene key="employeeList" component={EmployeeList} title="Employees" />
+    <Router sceneStyle={{ paddingTop: 55 }}>
+      <Scene key="auth">
+        <Scene key="login" component={LoginForm} title="Please Login" />
+      </Scene>
+      <Scene key="main">
+        <Scene key="employeeList" component={EmployeeList} title="Employees" />
+      </Scene>
     </Router>
   );
 };
