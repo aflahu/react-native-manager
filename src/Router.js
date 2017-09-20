@@ -3,6 +3,7 @@ import { Scene, Router, Actions } from 'react-native-router-flux';
 import LoginForm from './component/LoginForm';
 import EmployeeList from './component/EmployeeList';
 import EmployeeCreate from './component/EmployeeCreate';
+import EmployeeEdit from './component/EmployeeEdit';
 
 const RouterComponent = () => {
   return (
@@ -19,6 +20,7 @@ const RouterComponent = () => {
           title="Employees"
         />
         <Scene key="employeeCreate" component={EmployeeCreate} title="Create Employee" />
+        <Scene key="employeeEdit" component={EmployeeEdit} title="Edit Employee" />
       </Scene>
     </Router>
   );
