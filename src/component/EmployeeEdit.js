@@ -24,6 +24,14 @@ class EmployeeEdit extends Component {
     Communications.text(phone, `Your upcoming shift is on ${shift}`);
   }
 
+  onAccept() {
+    
+  }
+
+  onDecline() {
+    this.setState({ showModal: false });
+  }
+
   render() {
     return (
       <Card>
@@ -43,7 +51,13 @@ class EmployeeEdit extends Component {
           </Button>
         </CardSection>
 
-        <Confirm visible={this.state.showModal}>Are you sure to delete this?</Confirm>
+        <Confirm
+          visible={this.state.showModal}
+          onAccept={this.onAccept.bind(this)}
+          onDecline={this.onDecline.bind(this)}
+        >
+          Are you sure to delete this?
+        </Confirm>
       </Card>
     );
   }
